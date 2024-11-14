@@ -12,15 +12,13 @@ jobs:
 
     steps:
       # Check out the repository under $GITHUB_WORKSPACE so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3  # Updated version to use Node 20
 
       # Generate the snake animation
-      - uses: Platane/snk@v2  # Use a specific version instead of "master"
+      - uses: Platane/snk@v2  # Updated version to latest v2
         id: snake-gif
         with:
-          github_user_name: EinMelih
-          gif_out_path: dist/github-contribution-grid-snake.gif
-          svg_out_path: dist/github-contribution-grid-snake.svg
+          github_user_name: EinMelih  # Ensure only valid inputs are provided
 
       # Show the status of the build for debugging
       - run: git status
